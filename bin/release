@@ -1,2 +1,2 @@
-echo 'Complete release.'
+echo 'Complete Veritrans Buildpack.'
 exit 0

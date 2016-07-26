@@ -1,7 +1,6 @@
 #!/bin/sh
 
 if [ -f "$1/tg_mdk.heroku.ini" ]; then
-  export_env_dir
   cp -f $1/tg_mdk.heroku.ini $1/tg_mdk.ini
   exit 0
 else
