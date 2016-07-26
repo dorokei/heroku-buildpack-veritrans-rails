@@ -1,6 +1,19 @@
 #!/bin/sh
 
+export_env_dir() {
+  env_dir=$3
+  whitelist_regex=${2:-''}
+  blacklist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
+  if [ -d "$env_dir" ]; then
+    for e in $(ls $env_dir); do
+      echo "$e" | grep -E "$whitelist_regex" | grep -qvE "$blacklist_regex" &&
+      export "$e=$(cat $env_dir/$e)"
+    done
+  fi
+}
+
 if [ -f "$1/tg_mdk.${SERVICE}.ini" ]; then
+  export_env_dir
   cp -f $1/tg_mdk.${SERVICE}.ini $1/tg_mdk.ini
   exit 0
 else

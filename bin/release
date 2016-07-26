@@ -1,1 +1,2 @@
 echo 'Complete release.'
+exit 0
