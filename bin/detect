@@ -1,7 +1,6 @@
 #!/bin/sh
 
 if [ -f "$1/tg_mdk.heroku.ini" ]; then
-  export_env_dir
   echo "Detect veritrans configuration for heroku."
   exit 0
 else
