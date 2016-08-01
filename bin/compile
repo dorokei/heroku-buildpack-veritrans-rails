@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ -f "$1/tg_mdk.heroku.ini" ]; then
-  cp -f $1/tg_mdk.heroku.ini $1/tg_mdk.ini
+if [ -f "$1/vendor/tgMdkRuby/tgMdk/tg_mdk.heroku.ini" ]; then
+  cp -f $1/vendor/tgMdkRuby/tgMdk/tg_mdk.heroku.ini $1/vendor/tgMdkRuby/tgMdk/tg_mdk.ini
   exit 0
 else
   echo "Cannot detect tg_mdk.heroku.ini"
