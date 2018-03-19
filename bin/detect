@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -f "$1/vendor/tgMdkRuby/tgMdk/tg_mdk.heroku.ini" ]; then
+if [ -f "$1/vendor/MdkRuby/tgMdk/tg_mdk.heroku.ini" ]; then
   echo "Detect veritrans configuration for heroku."
   exit 0
 else
